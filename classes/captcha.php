@@ -431,7 +431,7 @@ abstract class Captcha
 	{
 		// Output html element
 		if ($html === TRUE)
-			return '<img src="'.url::site('captcha/'.Captcha::$config['group']).URL::query(array('r' => Text::random('alnum', 32)), FALSE)'" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
+			return '<img src="'.url::site('captcha/'.Captcha::$config['group']).URL::query(array('r' => Text::random('alnum', 32)), FALSE).'" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
 
 		// Send the correct HTTP header
         Request::current()->headers['Content-Type'] = 'image/'.$this->image_type;
